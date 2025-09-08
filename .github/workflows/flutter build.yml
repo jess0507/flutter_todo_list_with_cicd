@@ -1,6 +1,6 @@
-name: Flutter build
+name: flutter build
 on:
-  only:
+  push:
     tags:
       - 'v*.*.*'
 
