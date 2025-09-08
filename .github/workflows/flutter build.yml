@@ -1,0 +1,56 @@
+name: Flutter build
+on:
+  only:
+    tags:
+      - 'v*.*.*'
+
+env: 
+  flutter-version: '3.35.2'
+
+jobs:
+  dart-lint:
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: Cache Flutter dependencies
+        uses: actions/cache@v4
+        with:
+          path: /opt/hostedtoolcache/flutter
+          key: ${{ runner.OS }}-flutter-install-cache-${{ env.flutter_version }}
+          
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.flutter_version }}
+      
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate files
+        run: flutter pub run build_runner build --delete-conflicting-outputs
+
+      - name: Run Dart Lint
+        run: flutter analyze  
+      
+      - name: Run tests
+        run: flutter test
+
+      - name: Build debug apk
+        run: |
+            cd ${{ env.PROJECT_NAME }} && flutter build apk --debug
+            echo "APP_PATH=${{ env.PROJECT_NAME }}/build/app/outputs/flutter-apk/app-debug.apk" >> $GITHUB_ENV
+      
+      - uses: actions/upload-artifact@v4
+        with: 
+          name: app-dubug.apk
+          path: ${{ env.APP_PATH }}
+
