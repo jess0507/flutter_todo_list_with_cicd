@@ -1,8 +1,8 @@
 name: Flutter build
 on:
-  push:
-    branches:
-      - master
+  only:
+    tags:
+      - 'v*.*.*'
 
 env: 
   flutter-version: '3.35.2'
