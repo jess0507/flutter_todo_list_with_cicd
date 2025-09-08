@@ -17,8 +17,9 @@ jobs:
       - name: Set up
         uses: actions/setup-java@v4
         with:
-          distribution: 'adopt'
-          java-version: '11'
+          java-version: '17'
+          distribution: 'temurin' # Or 'adopt', 'oracle', etc.
+          cache: 'maven'
 
       - name: Cache Flutter dependencies
         uses: actions/cache@v4
