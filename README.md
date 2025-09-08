@@ -9,7 +9,7 @@
 
 ## Build the project
 - fvm flutter pub get
-- fvm flutter pub run build_runner build
+- fvm flutter pub run build_runner build --delete-conflicting-outputs
 
 ## Run the project
 - fvm flutter pub run

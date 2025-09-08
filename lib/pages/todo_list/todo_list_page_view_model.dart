@@ -6,8 +6,6 @@ import '../../data/repo/todo_repository.dart';
 import '../../domain/model/todo.dart';
 import 'model/todo_list_page_view_model_state.dart';
 
-final counterProvider = StateProvider<int>((ref) => 0);
-
 final todoListPageViewmodel = StateNotifierProvider.autoDispose<
     TodoListPageViewmodel,
     TodoListPageViewModelState>((ref) => TodoListPageViewmodel());

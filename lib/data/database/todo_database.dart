@@ -1,4 +1,3 @@
-import 'package:flutter_todo_list_with_cicd/core/extensions/dynamic_extension.dart';
 
 import 'base_database.dart';
 import 'model/todo_entity.dart';
