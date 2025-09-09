@@ -5,7 +5,7 @@ import 'package:rxdart/subjects.dart';
 import 'package:sqflite/sqflite.dart';
 
 mixin BaseDatabase<T> {
-  static Database? _database;
+  Database? _database;
 
   final _streamController = BehaviorSubject<List<T>>.seeded([]);
   Stream<List<T>> get stream => _streamController.stream;
