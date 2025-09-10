@@ -1,18 +1,18 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'todo_entity.freezed.dart';
-part 'todo_entity.g.dart';
+part 'todo_model.freezed.dart';
+part 'todo_model.g.dart';
 
 @freezed
-class TodoEntity with _$TodoEntity {
-  const factory TodoEntity({
+class TodoModel with _$TodoModel {
+  const factory TodoModel({
     @Default(-1) int id,
     @Default('') String content,
     @Default('none') String importance,
     @Default(false) bool isCompleted,
     @Default(0) int createAt,
-  }) = _TodoEntity;
+  }) = _TodoModel;
 
-  factory TodoEntity.fromJson(Map<String, dynamic> json) =>
-      _$TodoEntityFromJson(json);
+  factory TodoModel.fromJson(Map<String, dynamic> json) =>
+      _$TodoModelFromJson(json);
 }

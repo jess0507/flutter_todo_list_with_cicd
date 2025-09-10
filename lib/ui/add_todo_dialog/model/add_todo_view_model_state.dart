@@ -1,10 +1,10 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/model/todo.dart';
+import '../../../domain/entity/todo.dart';
 
-part 'add_todo_view_model_state.g.dart';
 part 'add_todo_view_model_state.freezed.dart';
+part 'add_todo_view_model_state.g.dart';
 
 @freezed
 class AddTodoViewModelState with _$AddTodoViewModelState {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../domain/model/importance.dart';
+import '../../../domain/entity/importance.dart';
 
 typedef OnChoicePressed = Function(Importance);
 

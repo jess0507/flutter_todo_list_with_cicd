@@ -1,9 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../domain/model/todo.dart';
+import '../../../domain/entity/todo.dart';
 
-part 'todo_list_page_view_model_state.g.dart';
 part 'todo_list_page_view_model_state.freezed.dart';
+part 'todo_list_page_view_model_state.g.dart';
 
 @freezed
 class TodoListPageViewModelState with _$TodoListPageViewModelState {

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'todo_entity.dart';
+part of 'todo_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,34 +15,32 @@ final _privateConstructorUsedError = UnsupportedError(
   'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
 );
 
-TodoEntity _$TodoEntityFromJson(Map<String, dynamic> json) {
-  return _TodoEntity.fromJson(json);
+TodoModel _$TodoModelFromJson(Map<String, dynamic> json) {
+  return _TodoModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$TodoEntity {
+mixin _$TodoModel {
   int get id => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   String get importance => throw _privateConstructorUsedError;
   bool get isCompleted => throw _privateConstructorUsedError;
   int get createAt => throw _privateConstructorUsedError;
 
-  /// Serializes this TodoEntity to a JSON map.
+  /// Serializes this TodoModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of TodoEntity
+  /// Create a copy of TodoModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $TodoEntityCopyWith<TodoEntity> get copyWith =>
+  $TodoModelCopyWith<TodoModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TodoEntityCopyWith<$Res> {
-  factory $TodoEntityCopyWith(
-    TodoEntity value,
-    $Res Function(TodoEntity) then,
-  ) = _$TodoEntityCopyWithImpl<$Res, TodoEntity>;
+abstract class $TodoModelCopyWith<$Res> {
+  factory $TodoModelCopyWith(TodoModel value, $Res Function(TodoModel) then) =
+      _$TodoModelCopyWithImpl<$Res, TodoModel>;
   @useResult
   $Res call({
     int id,
@@ -54,16 +52,16 @@ abstract class $TodoEntityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TodoEntityCopyWithImpl<$Res, $Val extends TodoEntity>
-    implements $TodoEntityCopyWith<$Res> {
-  _$TodoEntityCopyWithImpl(this._value, this._then);
+class _$TodoModelCopyWithImpl<$Res, $Val extends TodoModel>
+    implements $TodoModelCopyWith<$Res> {
+  _$TodoModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TodoEntity
+  /// Create a copy of TodoModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -103,12 +101,12 @@ class _$TodoEntityCopyWithImpl<$Res, $Val extends TodoEntity>
 }
 
 /// @nodoc
-abstract class _$$TodoEntityImplCopyWith<$Res>
-    implements $TodoEntityCopyWith<$Res> {
-  factory _$$TodoEntityImplCopyWith(
-    _$TodoEntityImpl value,
-    $Res Function(_$TodoEntityImpl) then,
-  ) = __$$TodoEntityImplCopyWithImpl<$Res>;
+abstract class _$$TodoModelImplCopyWith<$Res>
+    implements $TodoModelCopyWith<$Res> {
+  factory _$$TodoModelImplCopyWith(
+    _$TodoModelImpl value,
+    $Res Function(_$TodoModelImpl) then,
+  ) = __$$TodoModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({
@@ -121,15 +119,15 @@ abstract class _$$TodoEntityImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$TodoEntityImplCopyWithImpl<$Res>
-    extends _$TodoEntityCopyWithImpl<$Res, _$TodoEntityImpl>
-    implements _$$TodoEntityImplCopyWith<$Res> {
-  __$$TodoEntityImplCopyWithImpl(
-    _$TodoEntityImpl _value,
-    $Res Function(_$TodoEntityImpl) _then,
+class __$$TodoModelImplCopyWithImpl<$Res>
+    extends _$TodoModelCopyWithImpl<$Res, _$TodoModelImpl>
+    implements _$$TodoModelImplCopyWith<$Res> {
+  __$$TodoModelImplCopyWithImpl(
+    _$TodoModelImpl _value,
+    $Res Function(_$TodoModelImpl) _then,
   ) : super(_value, _then);
 
-  /// Create a copy of TodoEntity
+  /// Create a copy of TodoModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -141,7 +139,7 @@ class __$$TodoEntityImplCopyWithImpl<$Res>
     Object? createAt = null,
   }) {
     return _then(
-      _$TodoEntityImpl(
+      _$TodoModelImpl(
         id: null == id
             ? _value.id
             : id // ignore: cast_nullable_to_non_nullable
@@ -169,8 +167,8 @@ class __$$TodoEntityImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$TodoEntityImpl implements _TodoEntity {
-  const _$TodoEntityImpl({
+class _$TodoModelImpl implements _TodoModel {
+  const _$TodoModelImpl({
     this.id = -1,
     this.content = '',
     this.importance = 'none',
@@ -178,8 +176,8 @@ class _$TodoEntityImpl implements _TodoEntity {
     this.createAt = 0,
   });
 
-  factory _$TodoEntityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TodoEntityImplFromJson(json);
+  factory _$TodoModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TodoModelImplFromJson(json);
 
   @override
   @JsonKey()
@@ -199,14 +197,14 @@ class _$TodoEntityImpl implements _TodoEntity {
 
   @override
   String toString() {
-    return 'TodoEntity(id: $id, content: $content, importance: $importance, isCompleted: $isCompleted, createAt: $createAt)';
+    return 'TodoModel(id: $id, content: $content, importance: $importance, isCompleted: $isCompleted, createAt: $createAt)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TodoEntityImpl &&
+            other is _$TodoModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.importance, importance) ||
@@ -222,31 +220,31 @@ class _$TodoEntityImpl implements _TodoEntity {
   int get hashCode =>
       Object.hash(runtimeType, id, content, importance, isCompleted, createAt);
 
-  /// Create a copy of TodoEntity
+  /// Create a copy of TodoModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$TodoEntityImplCopyWith<_$TodoEntityImpl> get copyWith =>
-      __$$TodoEntityImplCopyWithImpl<_$TodoEntityImpl>(this, _$identity);
+  _$$TodoModelImplCopyWith<_$TodoModelImpl> get copyWith =>
+      __$$TodoModelImplCopyWithImpl<_$TodoModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TodoEntityImplToJson(this);
+    return _$$TodoModelImplToJson(this);
   }
 }
 
-abstract class _TodoEntity implements TodoEntity {
-  const factory _TodoEntity({
+abstract class _TodoModel implements TodoModel {
+  const factory _TodoModel({
     final int id,
     final String content,
     final String importance,
     final bool isCompleted,
     final int createAt,
-  }) = _$TodoEntityImpl;
+  }) = _$TodoModelImpl;
 
-  factory _TodoEntity.fromJson(Map<String, dynamic> json) =
-      _$TodoEntityImpl.fromJson;
+  factory _TodoModel.fromJson(Map<String, dynamic> json) =
+      _$TodoModelImpl.fromJson;
 
   @override
   int get id;
@@ -259,10 +257,10 @@ abstract class _TodoEntity implements TodoEntity {
   @override
   int get createAt;
 
-  /// Create a copy of TodoEntity
+  /// Create a copy of TodoModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TodoEntityImplCopyWith<_$TodoEntityImpl> get copyWith =>
+  _$$TodoModelImplCopyWith<_$TodoModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
