@@ -1,8 +1,8 @@
 
-import 'base_database.dart';
-import 'model/todo_entity.dart';
+import '../base/base_database.dart';
+import '../model/todo_model.dart';
 
-class TodoDatabase with BaseDatabase<TodoEntity> {
+class TodoDatabase extends BaseDatabase<TodoModel> {
   TodoDatabase._();
   static final instance = TodoDatabase._();
   
@@ -22,15 +22,16 @@ class TodoDatabase with BaseDatabase<TodoEntity> {
 
   @override
   String get dbName => 'todo_database.db';
+  
   @override
-  TodoEntity fromMap(Map<String, dynamic> map) {
+  TodoModel fromMap(Map<String, dynamic> map) {
     final entityMap = Map<String, dynamic>.from(map)
       ..['isCompleted'] = map['isCompleted'] == 1;
-    return TodoEntity.fromJson(entityMap);
+    return TodoModel.fromJson(entityMap);
   }
 
   @override
-  Map<String, dynamic> toMap(TodoEntity item) {
+  Map<String, dynamic> toMap(TodoModel item) {
     final map = item.toJson()..['isCompleted'] = item.isCompleted ? 1 : 0;
     return map;
   }

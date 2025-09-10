@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../domain/model/todo.dart';
+import '../../../domain/entity/todo.dart';
 import '../../../core/key/lokalise_key.dart';
 import '../../../core/key/widget_key.dart';
 import '../../todo_list/todo_list_page_view_model.dart';

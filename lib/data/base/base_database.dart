@@ -4,7 +4,7 @@ import 'package:path/path.dart';
 import 'package:rxdart/subjects.dart';
 import 'package:sqflite/sqflite.dart';
 
-mixin BaseDatabase<T> {
+abstract class BaseDatabase<T> {
   Database? _database;
 
   final _streamController = BehaviorSubject<List<T>>.seeded([]);

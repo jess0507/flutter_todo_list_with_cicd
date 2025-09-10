@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../domain/model/todo.dart';
+import '../../domain/entity/todo.dart';
 import 'widget/add_todo_view.dart';
 
 class AddTodoDialog {

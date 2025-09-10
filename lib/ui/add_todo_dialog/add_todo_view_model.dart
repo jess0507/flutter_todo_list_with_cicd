@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../domain/model/importance.dart';
+import '../../domain/entity/importance.dart';
 import 'model/add_todo_view_model_state.dart';
 
 final addTodoViewmodel =

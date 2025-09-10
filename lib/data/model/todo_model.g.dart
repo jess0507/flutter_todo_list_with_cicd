@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'todo_entity.dart';
+part of 'todo_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$TodoEntityImpl _$$TodoEntityImplFromJson(Map<String, dynamic> json) =>
-    _$TodoEntityImpl(
+_$TodoModelImpl _$$TodoModelImplFromJson(Map<String, dynamic> json) =>
+    _$TodoModelImpl(
       id: (json['id'] as num?)?.toInt() ?? -1,
       content: json['content'] as String? ?? '',
       importance: json['importance'] as String? ?? 'none',
@@ -15,7 +15,7 @@ _$TodoEntityImpl _$$TodoEntityImplFromJson(Map<String, dynamic> json) =>
       createAt: (json['createAt'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$TodoEntityImplToJson(_$TodoEntityImpl instance) =>
+Map<String, dynamic> _$$TodoModelImplToJson(_$TodoModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'content': instance.content,
